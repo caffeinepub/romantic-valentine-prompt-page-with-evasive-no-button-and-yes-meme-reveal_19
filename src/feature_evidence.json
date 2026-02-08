@@ -1,0 +1,78 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-romantic-valentine-prompt-ui-that-asks-the-user-in-english-to-be-the-author-s-valentine-using-a-pink-and-white-color-scheme-and-a-simple-centered-layout-optimized-for-ipad-chrome",
+      "featureTitle": "Create a single-page romantic Valentine prompt UI that asks the user (in English) to be the author’s Valentine, using a pink-and-white color scheme and a simple, centered layout optimized for iPad Chrome.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-two-on-screen-options-yes-and-no-the-no-option-must-move-away-when-the-user-attempts-to-interact-with-it-so-that-it-is-effectively-not-clickable",
+      "featureTitle": "Implement two on-screen options: “Yes” and “No”. The “No” option must move away when the user attempts to interact with it so that it is effectively not clickable.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-when-the-user-clicks-taps-yes-replace-the-prompt-options-with-a-reveal-state-that-displays-a-meme-image-and-the-exact-message-that-s-the-best-decision-you-ve-ever-made",
+      "featureTitle": "When the user clicks/taps “Yes”, replace the prompt/options with a reveal state that displays a meme image and the exact message: “That’s the best decision you’ve ever made❤️”.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-required-generated-meme-image-to-the-app-as-a-static-asset-under-frontend-public-assets-generated-and-render-it-in-the-yes-reveal-state",
+      "featureTitle": "Add the required generated meme image to the app as a static asset under frontend/public/assets/generated and render it in the “Yes” reveal state.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

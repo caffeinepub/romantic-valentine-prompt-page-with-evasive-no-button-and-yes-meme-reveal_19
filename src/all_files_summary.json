@@ -1,0 +1,15 @@
+{
+  "backend/main.mo": "Defines an empty Motoko actor, acting as a placeholder backend with no exposed methods.",
+  "feature_evidence.json": "Machine-readable report listing implemented Valentine UI features, their associated files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose of key frontend files for documentation or planning.",
+  "frontend/index.css": "Tailwind CSS base stylesheet defining a pink-themed design system using CSS variables, including light/dark modes and base element styling.",
+  "frontend/index.html": "HTML entry point that sets metadata, page title, and mounts the React app into the root div.",
+  "frontend/src/App.tsx": "Main React component implementing the Valentine interaction with a prompt state (Yes/No with evasive No) and a reveal state showing a meme and message after Yes.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages an ICP backend actor using React Query, recreating it when the user’s Internet Identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides context, hooks, and provider logic for authenticating users with Internet Identity, managing login state, and persisting identities.",
+  "frontend/src/hooks/useQueries.ts": "Intentionally empty hook file indicating no backend queries are required for this frontend-only page.",
+  "frontend/src/index.css": "Extended Tailwind CSS styles defining a romantic pink color palette, typography, animations, and global layout styles for the app.",
+  "frontend/src/main.tsx": "Application entry point that initializes React, React Query, and Internet Identity context, and renders the App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration enabling class-based dark mode, scanning frontend source files, and extending the theme with CSS variable–driven colors, radii, shadows, and accordion animations. It also configures centered containers and includes typography, container queries, and animation plugins.",
+  "project_state.json": "Project metadata describing a simple interactive Valentine web page with Yes/No choices, an evasive No button, and a meme reveal on Yes, optimized for iPad Chrome. Tracks implemented features, pending requests, image requirements, and confirms no backend changes are needed."
+}

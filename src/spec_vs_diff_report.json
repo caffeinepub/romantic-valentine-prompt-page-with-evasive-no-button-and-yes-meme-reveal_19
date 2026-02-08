@@ -1,0 +1,89 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-03T15:35:06.231Z",
+  "summary": "Frontend Valentine page UI was added with a prompt and a “Yes” reveal state, but the diff evidence is incomplete/truncated for the evasive “No” behavior and the required static image asset is not shown as added. Several unrequested/auth-related and backend files were introduced, conflicting with the frontend-only/non-goals constraints.",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "Implement two on-screen options: “Yes” and “No”. The “No” option must move away when the user attempts to interact with it so that it is effectively not clickable.",
+      "reason": "The added App.tsx shows state and a hover handler for a moving No button, but the diff is truncated before any “No” control is actually shown, and there is no evidence of pointer-enter + touchstart/pointerdown handlers, nor evidence that the No button remains on-screen.",
+      "evidence": [
+        "frontend/src/App.tsx (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "requirement": "When the user clicks/taps “Yes”, replace the prompt/options with a reveal state that displays a meme image and the exact message: “That’s the best decision you’ve ever made❤️”.",
+      "reason": "The reveal state exists, but the displayed message uses straight apostrophes (\"That's\" / \"you've\") rather than the exact curly-apostrophe text specified in the requirement, so the ‘exact message’ AC is not evidenced as met.",
+      "evidence": [
+        "frontend/src/App.tsx (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Add the required generated meme image to the app as a static asset under frontend/public/assets/generated and render it in the “Yes” reveal state.",
+      "reason": "App.tsx references the image path, but the diff summary does not show the required file being added under frontend/public/assets/generated/valentine-meme.dim_1200x1200.png, so existence and static-asset loading cannot be confirmed from the diff.",
+      "evidence": [
+        "frontend/src/App.tsx (truncated)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added backend canister code despite the request being frontend-only and ‘Do not add new backend functionality unless required’.",
+      "reason": "A new backend file was added even though no backend changes were required for this feature.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Internet Identity authentication scaffolding/hooks and provider wiring were added, despite being a stated non-goal (no Internet Identity authentication).",
+      "reason": "New hooks and provider usage for Internet Identity were introduced even though the BuildRequest explicitly excludes it.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts (truncated)",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "React Query client/provider setup added even though no backend queries are needed for a frontend-only single page.",
+      "reason": "The app is wrapped with QueryClientProvider and new actor/query hooks were added without being requested.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Extra footer branding/link (© 2026, caffeine.ai) added.",
+      "reason": "Not requested and could be considered an additional app section beyond the single prompt and reveal states.",
+      "evidence": [
+        "frontend/src/App.tsx (truncated)"
+      ]
+    },
+    {
+      "description": "User-facing text includes emojis (e.g., “Choose wisely... 💕”, “Yes! 💖”), deviating from the requirement to use English for all user-facing text and from the specified option labels “Yes”/“No”.",
+      "reason": "Emojis and modified button label are additional/altered UI text not specified in the BuildRequest.",
+      "evidence": [
+        "frontend/src/App.tsx (truncated)"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

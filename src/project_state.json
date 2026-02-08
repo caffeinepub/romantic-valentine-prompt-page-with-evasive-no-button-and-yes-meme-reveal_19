@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Interactive romantic Valentine web page (HTML/CSS/JS) with Yes/No prompt; No button evasive on hover; Yes shows meme image message; optimized to run in Chrome on iPad.",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-romantic-valentine-prompt-ui-that-asks-the-user-in-english-to-be-the-author-s-valentine-using-a-pink-and-white-color-scheme-and-a-simple-centered-layout-optimized-for-ipad-chrome",
+      "title": "Create a single-page romantic Valentine prompt UI that asks the user (in English) to be the author’s Valentine, using a pink-and-white color scheme and a simple, centered layout optimized for iPad Chrome.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-two-on-screen-options-yes-and-no-the-no-option-must-move-away-when-the-user-attempts-to-interact-with-it-so-that-it-is-effectively-not-clickable",
+      "title": "Implement two on-screen options: “Yes” and “No”. The “No” option must move away when the user attempts to interact with it so that it is effectively not clickable.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-the-user-clicks-taps-yes-replace-the-prompt-options-with-a-reveal-state-that-displays-a-meme-image-and-the-exact-message-that-s-the-best-decision-you-ve-ever-made",
+      "title": "When the user clicks/taps “Yes”, replace the prompt/options with a reveal state that displays a meme image and the exact message: “That’s the best decision you’ve ever made❤️”.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-meme-image-to-the-app-as-a-static-asset-under-frontend-public-assets-generated-and-render-it-in-the-yes-reveal-state",
+      "title": "Add the required generated meme image to the app as a static asset under frontend/public/assets/generated and render it in the “Yes” reveal state.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a simple romantic-themed interactive Valentine web page (HTML/CSS/JS) with a single prompt asking to be Valentine",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Provide Yes and No options; make the No button move away on hover to prevent clicking",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "On clicking Yes, display a meme image with the text “That’s the best decision you’ve ever made❤️”",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Use pink and white romantic color scheme and styling",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Ensure page runs easily in Chrome on iPad (standalone HTML/CSS/JS)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architecturalNotes": [],
+  "knownIssues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Square meme-style romantic image with the text “That’s the best decision you’ve ever made❤️” in the design (valentine-meme.dim_1200x1200.png)",
+  "generatedImages": [
+    {
+      "filename": "valentine-meme.dim_1200x1200.png",
+      "description": "Square meme-style romantic image with the text “That’s the best decision you’ve ever made❤️” in the design",
+      "targetWidth": 1200,
+      "targetHeight": 1200
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Romantic Valentine prompt page with evasive No button and Yes meme reveal",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0,
+  "requiresBackendChanges": false,
+  "requiresFrontendChanges": true
+}

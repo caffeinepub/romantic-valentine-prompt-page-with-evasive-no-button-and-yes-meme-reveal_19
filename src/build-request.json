@@ -1,0 +1,99 @@
+{
+  "kind": "build_request",
+  "title": "Romantic Valentine prompt page with evasive No button and Yes meme reveal",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page romantic Valentine prompt UI that asks the user (in English) to be the author’s Valentine, using a pink-and-white color scheme and a simple, centered layout optimized for iPad Chrome.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create an interactive web page as a surprise for my girlfriend. The page should be simple, romantic-themed, and have only one purpose: to ask her to be my Valentine.",
+          "The page should be themed romantically with a pink and white color scheme and be fully interactive ... so that I can easily run it on my iPad using Chrome."
+        ]
+      },
+      "acceptanceCriteria": [
+        "App loads to a single screen with one clear question asking to be the author’s Valentine (English text).",
+        "Visual styling is consistently pink/white and romantic-themed.",
+        "Layout is responsive and usable on iPad Chrome in both portrait and landscape (no horizontal scrolling)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement two on-screen options: “Yes” and “No”. The “No” option must move away when the user attempts to interact with it so that it is effectively not clickable.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "There should be two options: Yes or No. When she hovers her cursor over No, it should move away so she cannot click it, forcing her to click only on Yes."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Both “Yes” and “No” controls are visible on initial load.",
+        "On pointer hover/enter over “No”, the “No” control relocates to a different position within the visible viewport/container.",
+        "On touch devices (iPad), attempting to tap “No” causes it to move away (e.g., on touchstart/pointerdown), preventing a successful click.",
+        "The “No” control never moves off-screen; it remains visible but evasive."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "When the user clicks/taps “Yes”, replace the prompt/options with a reveal state that displays a meme image and the exact message: “That’s the best decision you’ve ever made❤️”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "When she clicks Yes, show her a meme image telling her “That’s the best decision you’ve ever made❤️”."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking/tapping “Yes” transitions the UI to a new state without requiring page reload.",
+        "The reveal state shows the meme image and the exact text: “That’s the best decision you’ve ever made❤️”.",
+        "The original “Yes/No” options are no longer shown after the “Yes” selection."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add the required generated meme image to the app as a static asset under frontend/public/assets/generated and render it in the “Yes” reveal state.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "show her a meme image telling her “That’s the best decision you’ve ever made❤️”."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The generated image file exists at frontend/public/assets/generated/valentine-meme.dim_1200x1200.png.",
+        "The frontend loads and displays the image from static assets (not via backend).",
+        "Image scales appropriately on iPad and smaller screens (no overflow/cropping of the message)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text.",
+    "Frontend must be implemented within the provided React + TypeScript + Tailwind template (do not add a separate standalone HTML file).",
+    "Do not edit files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT.",
+    "Do not add new backend functionality unless required (this feature should be frontend-only)."
+  ],
+  "nonGoals": [
+    "Internet Identity authentication or any user accounts.",
+    "Persistent storage of responses.",
+    "Sharing, emailing, or social posting features.",
+    "Any additional pages or app sections beyond the single Valentine prompt and the Yes reveal state."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Square meme-style romantic image with the text “That’s the best decision you’ve ever made❤️” in the design (valentine-meme.dim_1200x1200.png)"
+    ],
+    "edits": []
+  }
+}

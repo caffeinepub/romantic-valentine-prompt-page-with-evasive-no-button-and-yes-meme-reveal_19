@@ -1,0 +1,6 @@
+{
+  "frontend/src/App.tsx": "Main Valentine's Day interactive page with two states: initial prompt with evasive \"No\" button and \"Yes\" button, and a reveal state showing the meme image with romantic message after \"Yes\" is clicked.",
+  "frontend/src/index.css": "Global styles with romantic pink-themed OKLCH color system optimized for the Valentine's page, including custom animations for fade-in effects.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color tokens and design system settings, maintaining the romantic pink theme throughout.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are required for this frontend-only interactive page."
+}
